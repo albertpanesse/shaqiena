@@ -1,7 +1,7 @@
 function Department(sequelize, DataTypes) {
 
 	var Department = sequelize.define('Department', {
-		department_id: {
+		ID: {
 			type: DataTypes.INTEGER,
 			primaryKey: true,
 			allowNull: false,
@@ -15,11 +15,12 @@ function Department(sequelize, DataTypes) {
 			type: DataTypes.STRING,
 			allowNull: true
 		}
-	}, 
+	},
 	{
-		timestamps: false,
-		tableName: 'department',
-		getterMethods: {},
+		timestamps: true,
+		tableName: 'Department',
+		instanceMethods: {},
+		getterMethods: {}
 	});
 
 	return Department;

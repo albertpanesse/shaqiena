@@ -9,6 +9,8 @@ import thunk from 'redux-thunk';
 import App from './App';
 import rootReducer from './stores/reducers';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // const store = createStore(rootReducer, composeEnhancers(applyMiddleware(logger, thunk)));
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));

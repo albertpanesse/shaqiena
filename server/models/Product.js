@@ -1,55 +1,55 @@
 function Product(sequelize, DataTypes) {
 
-    var Product = sequelize.define('Product', {
-        product_id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        description: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
-        price: {
-            type: DataTypes.FLOAT,
-            allowNull: false,
-            defaultValue: 0
-        },
-        discounted_price: {
-            type: DataTypes.FLOAT,
-            allowNull: false,
-            defaultValue: 0
-        },
-        image: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
-        image_2: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
-        thumbnail: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
-        display: {
-            type: DataTypes.SMALLINT,
-            allowNull: false,
-            defaultValue: 0
-        }
-    }, 
-    {
-        timestamps: false,
-        tableName: 'product',
-        getterMethods: {},
-    });
+	var Product = sequelize.define('Product', {
+		ID: {
+			type: DataTypes.INTEGER,
+			primaryKey: true,
+			allowNull: false,
+			autoIncrement: true
+		},
+		name: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		description: {
+			type: DataTypes.TEXT,
+			allowNull: true
+		},
+		price: {
+			type: DataTypes.FLOAT,
+			allowNull: false,
+			defaultValue: 0
+		},
+		discPrice: {
+			type: DataTypes.FLOAT,
+			allowNull: false,
+			defaultValue: 0
+		},
+		image: {
+			type: DataTypes.STRING,
+			allowNull: true
+		},
+		display: {
+			type: DataTypes.SMALLINT,
+			allowNull: false,
+			defaultValue: 0
+		}
+	},
+	{
+		timestamps: true,
+		tableName: 'Product',
+		instanceMethods: {},
+		getterMethods: {}
+	});
 
-    return Product;
+	Product.associate = (models) => {
+		Product.belongsTo(models.Category, {
+			constraints: false,
+			foreignKey: 'categoryID'
+		});
+	};
+
+	return Product;
 };
 
 module.exports = Product;

@@ -17,7 +17,7 @@ class Home extends React.Component {
 		return (
 			<React.Fragment>
 				<CommonElement.Header />
-				<HomeElement.Carousel />
+				<HomeElement.CarouselImages />
 				<Container>
 					<HomeElement.Featured />
 					<CommonElement.Footer />

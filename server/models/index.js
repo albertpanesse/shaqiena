@@ -6,7 +6,7 @@ const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const db = {};
 
-var databaseUrl = 'mysql://' + process.env.DB_UNAME + ':' + process.env.DB_PASWD + '@' + process.env.DB_HOST + ':3306/' + process.env.DB_NAME;
+var databaseUrl = 'postgres://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@' + process.env.DB_HOST + ':5432/' + process.env.DB_NAME;
 var sequelize = new Sequelize(databaseUrl, {logging: console.log});
 
 fs

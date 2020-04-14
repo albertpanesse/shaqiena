@@ -1,7 +1,7 @@
 function Category(sequelize, DataTypes) {
 
 	var Category = sequelize.define('Category', {
-		category_id: {
+		ID: {
 			type: DataTypes.INTEGER,
 			primaryKey: true,
 			allowNull: false,
@@ -15,16 +15,17 @@ function Category(sequelize, DataTypes) {
 			type: DataTypes.STRING,
 			allowNull: true
 		}
-	}, 
+	},
 	{
-		timestamps: false,
-		tableName: 'category',
-		getterMethods: {},
+		timestamps: true,
+		tableName: 'Category',
+		instanceMethods: {},
+		getterMethods: {}
 	});
 
 	Category.associate = (models) => {
 		Category.belongsTo(models.Department, {
-			foreignKey: 'department_id', 
+			foreignKey: 'departmentID', 
 			constraints: false
 		});
 	};
