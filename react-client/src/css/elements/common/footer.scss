@@ -1,0 +1,14 @@
+@media all and (max-width: 576px) {
+	.footer-wrapper {
+		
+	}
+}
+
+@media all and (min-width: 576px) {
+	.footer-wrapper {
+		img.logo {
+			width: 60%;
+			filter: grayscale(1);
+		}
+	}
+}

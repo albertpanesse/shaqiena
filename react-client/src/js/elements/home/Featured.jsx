@@ -1,4 +1,5 @@
 import React from 'react';
+import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button} from 'reactstrap';
 
 class Featured extends React.Component {
 	state = {}
@@ -11,52 +12,36 @@ class Featured extends React.Component {
 
 	render() {
 		return (
-			<div className="card-deck mb-3 text-center">
-				<div className="card mb-4 shadow-sm">
-					<div className="card-header">
-						<h4 className="my-0 font-weight-normal">Free</h4>
-					</div>
-					<div className="card-body">
-						<h1 className="card-title pricing-card-title">$0 <small className="text-muted">/ mo</small></h1>
-						<ul className="list-unstyled mt-3 mb-4">
-							<li>10 users included</li>
-							<li>2 GB of storage</li>
-							<li>Email support</li>
-							<li>Help center access</li>
-						</ul>
-						<button type="button" className="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-					</div>
-				</div>
-				<div className="card mb-4 shadow-sm">
-					<div className="card-header">
-						<h4 className="my-0 font-weight-normal">Pro</h4>
-					</div>
-					<div className="card-body">
-						<h1 className="card-title pricing-card-title">$15 <small className="text-muted">/ mo</small></h1>
-						<ul className="list-unstyled mt-3 mb-4">
-							<li>20 users included</li>
-							<li>10 GB of storage</li>
-							<li>Priority email support</li>
-							<li>Help center access</li>
-						</ul>
-						<button type="button" className="btn btn-lg btn-block btn-primary">Get started</button>
-					</div>
-				</div>
-				<div className="card mb-4 shadow-sm">
-					<div className="card-header">
-						<h4 className="my-0 font-weight-normal">Enterprise</h4>
-					</div>
-					<div className="card-body">
-						<h1 className="card-title pricing-card-title">$29 <small className="text-muted">/ mo</small></h1>
-						<ul className="list-unstyled mt-3 mb-4">
-							<li>30 users included</li>
-							<li>15 GB of storage</li>
-							<li>Phone and email support</li>
-							<li>Help center access</li>
-						</ul>
-						<button type="button" className="btn btn-lg btn-block btn-primary">Contact us</button>
-					</div>
-				</div>
+			<div className="card-deck mt-5 mb-4 featured-wrapper">
+				<Card>
+					<CardImg src={`${process.env.REACT_APP_IMAGE_URL}/products/1.jpg`} alt="Product 1" />
+					<CardBody>
+						<CardTitle>Andriani Hijab</CardTitle>
+						<CardText>Some quick example text to build on the card title and make up the bulk of the card content.</CardText>
+						<CardSubtitle className="mb-3">Rp. 250.000</CardSubtitle>
+						<button className="btn btn-default"><i className="fa fa-plus"></i></button>
+					</CardBody>
+				</Card>
+
+				<Card>
+					<CardImg src={`${process.env.REACT_APP_IMAGE_URL}/products/2.jpg`} alt="Product 2" />
+					<CardBody>
+						<CardTitle>Shaqiena Niqob</CardTitle>
+						<CardText>Some quick example text to build on the card title and make up the bulk of the card content.</CardText>
+						<CardSubtitle className="mb-3">Rp. 250.000</CardSubtitle>
+						<button className="btn btn-default"><i className="fa fa-plus"></i></button>
+					</CardBody>
+				</Card>
+
+				<Card>
+					<CardImg src={`${process.env.REACT_APP_IMAGE_URL}/products/3.jpg`} alt="Product 3" />
+					<CardBody>
+						<CardTitle>Shaqiena Boots</CardTitle>
+						<CardText>Some quick example text to build on the card title and make up the bulk of the card content.</CardText>
+						<CardSubtitle className="mb-3">Rp. 250.000</CardSubtitle>
+						<button className="btn btn-default"><i className="fa fa-plus"></i></button>
+					</CardBody>
+				</Card>
 			</div>
 		);
 	}

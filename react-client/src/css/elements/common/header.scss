@@ -1,3 +1,22 @@
-h5.ts-title {
-	text-transform: uppercase;
+@media all and (max-width: 576px) {
+}
+
+@media all and (min-width: 576px) {
+	.navbar-brand {
+		width: 30%;
+
+		img.logo {
+			width: 60%;
+		}
+	}
+
+	.nav-item {
+		padding: 0 30px 0 30px;
+		
+		.nav-link {
+			font-family: 'Roboto', sans-serif;
+			text-transform: uppercase;
+			color: #e123fa !important;
+		}
+	}
 }

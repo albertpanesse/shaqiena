@@ -1,0 +1,23 @@
+@media all and (max-width: 576px) {
+	.featured-wrapper {
+	}
+}
+
+@media all and (min-width: 576px) {
+	.featured-wrapper {
+		.card {
+			.card-body {
+				.card-title {
+					font-family: 'Lobster', cursive;
+					font-size: 26px;
+					color: #666666;
+				}
+
+				.card-subtitle {
+					font-size: 16px;
+					color: #e042f5;
+				}
+			}
+		}
+	}
+}
