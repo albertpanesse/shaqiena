@@ -14,7 +14,7 @@ class Footer extends React.Component {
 			<footer className="pt-4 my-md-5 pt-md-5 border-top footer-wrapper">
 				<div className="row">
 					<div className="col-12 col-md">
-						<img className="mb-2 logo" src={`${process.env.REACT_APP_IMAGE_URL}/logos/1.png`} alt="logo" />
+						<img className="mb-2 logo" src={`${process.env.IMAGE_URL}/logos/1.png`} alt="logo" />
 						<small className="d-block mb-3 text-muted">© 2020 Shaqiena.</small>
 					</div>
 					<div className="col-6 col-md">

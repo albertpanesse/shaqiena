@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import * as apis from '../../apis';
+import * as actions from '@client/stores/actions';
 
 class CategoryList extends React.Component {
 	state = {categories: []}
@@ -13,7 +13,7 @@ class CategoryList extends React.Component {
 
 	componentDidUpdate(prevProps, prevState, snapshot) { // eslint-disable-line
 		if (prevProps.departmentId !== this.props.departmentId) {
-			apis.getCategories(this.props.departmentId, categories => this.setState({categories}));
+			actions.getCategories(this.props.departmentId);
 		}
 	}
 

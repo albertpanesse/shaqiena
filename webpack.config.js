@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
-  entry: [path.resolve(__dirname, 'react-client/src/js/index.jsx')],
+  entry: [path.resolve(__dirname, 'react-client/src/js/index.js')],
   output: {
     path: path.resolve(__dirname, 'react-client/dist'),
     filename: 'bundle.js',
@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -25,7 +25,7 @@ module.exports = {
         }
       },
       {
-				test: /\.jsx$/,
+				test: /\.js$/,
 				include: [
 					path.resolve(__dirname, 'react-client/src/js/')
 				],
@@ -54,6 +54,9 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   resolve: {
-    extensions: ['.js', '.jsx']
+    alias: {
+      '@client': path.resolve(__dirname, 'react-client/src/js/'),
+      '@server': path.resolve(__dirname, 'server/'),
+    }
   }
 };

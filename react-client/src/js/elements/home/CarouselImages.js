@@ -9,22 +9,22 @@ import {
 
 const items = [
 	{
-		src: `${process.env.REACT_APP_IMAGE_URL}/carousels/1.jpg`,
+		src: `${process.env.IMAGE_URL}/carousels/1.jpg`,
 		altText: '',
 		caption: ''
 	},
 	{
-		src: `${process.env.REACT_APP_IMAGE_URL}/carousels/2.jpg`,
+		src: `${process.env.IMAGE_URL}/carousels/2.jpg`,
 		altText: '',
 		caption: ''
 	},
 	{
-		src: `${process.env.REACT_APP_IMAGE_URL}/carousels/3.jpg`,
+		src: `${process.env.IMAGE_URL}/carousels/3.jpg`,
 		altText: '',
 		caption: ''
 	},
 	{
-		src: `${process.env.REACT_APP_IMAGE_URL}/carousels/4.jpg`,
+		src: `${process.env.IMAGE_URL}/carousels/4.jpg`,
 		altText: '',
 		caption: ''
 	}

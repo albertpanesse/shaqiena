@@ -1,0 +1,20 @@
+/* NON EPICS */
+
+// common
+export const SET_TITLE = 'SET_TITLE';
+
+/* USING EPICS */
+
+// common
+export const SET_START_LOADING = 'SET_START_LOADING';
+export const SET_FINISH_LOADING = 'SET_FINISH_LOADING';
+
+// department
+export const GET_DEPARTMENTS = 'GET_DEPARTMENTS';
+export const SET_DEPARTMENTS_SUCCESS = 'SET_DEPARTMENTS_SUCCESS';
+export const SET_DEPARTMENTS_FAILED = 'SET_DEPARTMENTS_FAILED';
+
+// product
+export const GET_FEATURED = 'GET_FEATURED';
+export const SET_FEATURED_SUCCESS = 'SET_FEATURED_SUCCESS';
+export const SET_FEATURED_FAILED = 'SET_FEATURED_FAILED';

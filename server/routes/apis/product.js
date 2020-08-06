@@ -19,4 +19,20 @@ router.get('/get/all', (req, res) => {
 		});
 });
 
+router.get('/get/featured', (req, res) => {
+	model.Product.findAll()
+		.then((featured) => {
+			return res.send({
+				success: true,
+				featured: featured
+			});
+		})
+		.catch((err) => {
+			return res.status(500).send({
+				success: false,
+				error: err
+			});
+		});
+});
+
 module.exports = router;

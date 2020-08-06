@@ -1,18 +1,18 @@
 import * as actionTypes from '../actionTypes';
 
-const initialState = {title: ''};
+const initialState = {featured: []};
 
-const reducer = (state = initialState, action) => {
+function reducer(state = initialState, action) {
 	switch (action.type) {
-		case actionTypes.SET_TITLE:
+		case actionTypes.SET_FEATURED_SUCCESS:
 			return {
 				...state,
-				title: action.payload
+				featured: action.payload
 			};
 		default:
 			return state;
 	}
-};
+}
 
 
 export default reducer;
